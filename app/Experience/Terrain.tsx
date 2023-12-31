@@ -120,7 +120,7 @@ export default function Terrain({ instance }: { instance: any }) {
             float getElevation(vec2 _position) {
             
                 float elevation = 0.0;
-                // float iterations = 2.0;
+                // float iterations = 5.0;
             
                 vec2 position = _position;
                 position.x += uTime * 0.1;
@@ -156,7 +156,7 @@ export default function Terrain({ instance }: { instance: any }) {
                 //         vec3(
                 //             position.x * freq , 
                 //             position.y * freq , 
-                //             0.0 
+                //             random
                 //         )
                 //     );
                 //     elevation += iterationElevation * amplitude;

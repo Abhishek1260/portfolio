@@ -32,7 +32,9 @@ export const SideBar = () => {
                             <LabelStyle toggleMenu={() => { toggleMenu() }} icon={SkillsSVG} text="Skills" />
                         </Link>
                         <LabelStyle toggleMenu={() => { toggleMenu() }} icon={ProjectsSVG} text="My Projects" />
-                        <LabelStyle toggleMenu={() => { toggleMenu() }} icon={ContactSVG} text="Contact Me" />
+                        <Link href="/contact">
+                            <LabelStyle toggleMenu={() => { toggleMenu() }} icon={ContactSVG} text="Contact Me" />
+                        </Link>
                     </div>
 
                     <div className="flex-1">
