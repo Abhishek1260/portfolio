@@ -1,4 +1,4 @@
-import { AngularSVG, NextSVG, NodeJSSVG, ReactSVG, SpringBootSVG, ThreeSVG } from "../constants/constants"
+import { AngularSVG, FlutterSVG, KotlinSVG, NextSVG, NodeJSSVG, PytorchSVG, ReactSVG, SpringBootSVG, SwiftSVG, TensorflowSVG, ThreeSVG } from "../constants/constants"
 
 export default function Page() {
     return <>
@@ -17,7 +17,9 @@ export default function Page() {
                     </div>
                     <SkillSection title="Website Frontend" subtitle="Technologies i use to create website frontend" arr={frontEndSkills} />
                     <SkillSection title="Backend" subtitle="Technologies i use to create backend" arr={backendSkills} />
-                    <SkillSection title="Android Frontend" subtitle="Technologies i use to create Android Frontend" arr={[]} />
+                    <SkillSection title="Android Frontend" subtitle="Technologies i use to create Android Frontend" arr={androidSkills} />
+                    <SkillSection title="IOS Frontend" subtitle="Technologies i use to create IOS Frontend" arr={iosSkills} />
+                    <SkillSection title="Machine Learning" subtitle="Technologies i use to create Machine Learning Projects" arr={machineLearningSkills} />
                     <div className="h-8"></div>
                 </div>
             </div>
@@ -59,6 +61,45 @@ const backendSkills = [
         icon: SpringBootSVG,
         desc: "",
         iconClass: "p-8"
+    }
+]
+
+const androidSkills = [
+    {
+        icon: FlutterSVG,
+        desc: "",
+        iconClass: "",
+    },
+    {
+        icon: KotlinSVG,
+        desc: "",
+        iconClass: "",
+    }
+]
+
+const iosSkills = [
+    {
+        icon: FlutterSVG,
+        desc: "",
+        iconClass: "",
+    },
+    {
+        icon: SwiftSVG,
+        desc: "",
+        iconClass: "p-16",
+    }
+]
+
+const machineLearningSkills = [
+    {
+        icon: TensorflowSVG,
+        desc: "",
+        iconClass: "",
+    },
+    {
+        icon: PytorchSVG,
+        desc: "",
+        iconClass: "",
     }
 ]
 
