@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='-z-10 w-screen h-screen top-0 left-0 absolute'>
+        <div className='-z-10 w-screen h-screen top-0 left-0 absolute blur-sm'>
           <Experience />
         </div>
         <div className=' z-50 w-screen h-screen flex flex-col'>

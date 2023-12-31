@@ -7,8 +7,8 @@ export default function Page() {
       <div className="text-8xl text-gray-300 uppercase">
         abhishek bansal
       </div>
-      <div>
-
+      <div className="text-md text-gray-300 gap-2">
+        A Web developer, Android Developer, IOS Developer, ML / AI Expert
       </div>
     </div>
 
