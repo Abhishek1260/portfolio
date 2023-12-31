@@ -8,9 +8,9 @@ export default function Terrain({ instance }: { instance: any }) {
 
     useFrame((state) => {
         if (refer != null) {
+            console.log(state.clock.getDelta)
             refer.current!.uniforms.uTime.value = state.clock.getElapsedTime()
         }
-        console.log(refer)
     })
 
     return <mesh scale={[10, 10, 10]} rotation={[-Math.PI * 0.5, 0, 0]}>
