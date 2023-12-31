@@ -6,7 +6,6 @@ export default function Terrain({ instance }: { instance: any }) {
 
     const refer = useRef<ShaderMaterial>(null)
 
-
     useFrame((state) => {
         if (refer != null) {
             refer.current!.uniforms.uTime.value = state.clock.getElapsedTime()

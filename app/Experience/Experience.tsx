@@ -16,6 +16,7 @@ export default function Experience() {
     const textureWidth = 32
 
     useEffect(() => {
+        console.log("called")
         if (reference.current == null) return
         reference.current.width = textureWidth
         reference.current.height = textureHeight

@@ -1,13 +1,10 @@
-import type { Metadata } from 'next'
-import './globals.css'
+"use client"
+
 import Experience from './Experience/Experience'
+import './globals.css'
 import Navbar from './Navbar/Navbar'
 import { SideBar } from './components/client'
 
-export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'portfolio of abhishek bansal',
-}
 
 export default function RootLayout({
   children,
