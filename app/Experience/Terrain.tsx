@@ -27,7 +27,6 @@ export default function Terrain({ instance }: { instance: any }) {
     useFrame((state) => {
         if (refer != null) {
             refer.current!.uniforms.uTime.value = state.clock.getElapsedTime()
-            console.log(refer.current?.uniforms)
         }
     })
 
