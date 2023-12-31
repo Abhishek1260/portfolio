@@ -1,15 +1,33 @@
 import { useFrame } from "@react-three/fiber"
-import { useRef } from "react"
+import { useMemo, useRef } from "react"
 import { DoubleSide, ShaderMaterial, Vector3 } from "three"
 
 export default function Terrain({ instance }: { instance: any }) {
 
     const refer = useRef<ShaderMaterial>(null)
 
+    const uniforms = useMemo(() => ({
+        random: {
+            value: Math.random() * 10,
+        },
+        uElevation: {
+            value: 0,
+        },
+        uElevationMultiplier: {
+            value: 30.0,
+        },
+        uTexture: {
+            value: instance,
+        },
+        uTime: {
+            value: 0.0
+        }
+    }), [])
+
     useFrame((state) => {
         if (refer != null) {
-            console.log(state.clock.getDelta)
             refer.current!.uniforms.uTime.value = state.clock.getElapsedTime()
+            console.log(refer.current?.uniforms)
         }
     })
 
@@ -20,23 +38,7 @@ export default function Terrain({ instance }: { instance: any }) {
         <shaderMaterial
             side={DoubleSide}
             ref={refer}
-            uniforms={{
-                random: {
-                    value: Math.random() * 10,
-                },
-                uElevation: {
-                    value: 0,
-                },
-                uElevationMultiplier: {
-                    value: 30.0,
-                },
-                uTexture: {
-                    value: instance,
-                },
-                uTime: {
-                    value: 0.0
-                }
-            }}
+            uniforms={uniforms}
             vertexShader={
                 `
             vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
