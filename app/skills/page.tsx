@@ -104,7 +104,7 @@ const machineLearningSkills = [
 ]
 
 const SkillCard = ({ icon, desc, iconClass }: { icon: any, desc: string, iconClass: string }) => {
-    return <div className="w-60 h-60 bg-opacity-40 rounded-lg backdrop-blur-lg flex justify-center items-center bg-black p-4">
+    return <div className="flex-shrink-0 w-60 h-60 bg-opacity-40 rounded-lg backdrop-blur-lg flex justify-center items-center bg-black p-4">
 
         <div className={`w-full ${iconClass}`}>
             {icon}
@@ -123,7 +123,7 @@ const SkillSection = ({ title, subtitle, arr }: { title: string, subtitle: strin
                 {subtitle}
             </div>
         </div>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 w-full flex-shrink-0 flex-nowrap overflow-x-scroll">
             {
                 arr.map((e, index) => <SkillCard key={index} iconClass={e.iconClass} icon={e.icon} desc={e.desc} />)
             }
