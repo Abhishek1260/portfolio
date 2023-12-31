@@ -25,7 +25,7 @@ export default function Page() {
                     </div>
                     <div className="flex flex-row gap-4">
                         {
-                            frontEndSkills.map((e) => <SkillCard iconClass={e.iconClass} icon={e.icon} desc={e.desc} />)
+                            frontEndSkills.map((e, index) => <SkillCard key={index} iconClass={e.iconClass} icon={e.icon} desc={e.desc} />)
                         }
                     </div>
                 </div>
