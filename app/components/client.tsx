@@ -25,7 +25,7 @@ export const SideBar = () => {
 
         {
             showMenu ?
-                <div className="z-50 absolute top-0 flex flex-col bg-black bg-opacity-20 rounded backdrop-blur-sm left-0 h-full w-1/4 p-8">
+                <div className=" w-full z-50 absolute top-0 flex flex-col bg-black bg-opacity-20 rounded backdrop-blur-sm left-0 h-full lg:w-1/4 p-8  ">
                     <div className="flex flex-col gap-8">
 
                         <Link href="/skills">
