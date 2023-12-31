@@ -1,33 +1,24 @@
-import { NextSVG, ReactSVG, ThreeSVG } from "../constants/constants"
+import { AngularSVG, NextSVG, NodeJSSVG, ReactSVG, SpringBootSVG, ThreeSVG } from "../constants/constants"
 
 export default function Page() {
     return <>
 
 
-        <div className="w-full h-full bg-black bg-opacity-20 backdrop-blur-sm rounded p-8">
-            <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-2">
-                    <div className="text-3xl font-medium text-gray-300">
-                        My Skills
-                    </div>
-                    <div className="text-sm font-normal text-gray-500">
-                        Skills where i have expertise
-                    </div>
-                </div>
+        <div className="w-full h-full bg-black bg-opacity-20 backdrop-blur-sm rounded overflow-y-scroll">
+            <div className="w-full h-full p-8 ">
                 <div className="flex flex-col gap-4">
-                    <div className="flex flex-col gap-1">
-                        <div className="text-2xl text-gray-300 font-normal">
-                            Website Frontend
+                    <div className="flex flex-col gap-2">
+                        <div className="text-3xl font-medium text-gray-300">
+                            My Skills
                         </div>
                         <div className="text-sm font-normal text-gray-500">
-                            Technologies i use to create website frontend
+                            Skills where i have expertise
                         </div>
                     </div>
-                    <div className="flex flex-row gap-4">
-                        {
-                            frontEndSkills.map((e, index) => <SkillCard key={index} iconClass={e.iconClass} icon={e.icon} desc={e.desc} />)
-                        }
-                    </div>
+                    <SkillSection title="Website Frontend" subtitle="Technologies i use to create website frontend" arr={frontEndSkills} />
+                    <SkillSection title="Backend" subtitle="Technologies i use to create backend" arr={backendSkills} />
+                    <SkillSection title="Android Frontend" subtitle="Technologies i use to create Android Frontend" arr={[]} />
+                    <div className="h-8"></div>
                 </div>
             </div>
         </div>
@@ -50,6 +41,24 @@ const frontEndSkills = [
         icon: ThreeSVG,
         desc: "",
         iconClass: "stroke-white"
+    },
+    {
+        icon: AngularSVG,
+        desc: "",
+        iconClass: "p-12"
+    }
+]
+
+const backendSkills = [
+    {
+        icon: NodeJSSVG,
+        desc: "",
+        iconClass: ""
+    },
+    {
+        icon: SpringBootSVG,
+        desc: "",
+        iconClass: "p-8"
     }
 ]
 
@@ -60,5 +69,23 @@ const SkillCard = ({ icon, desc, iconClass }: { icon: any, desc: string, iconCla
             {icon}
         </div>
 
+    </div>
+}
+
+const SkillSection = ({ title, subtitle, arr }: { title: string, subtitle: string, arr: Array<any> }) => {
+    return <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-1">
+            <div className="text-2xl text-gray-300 font-normal">
+                {title}
+            </div>
+            <div className="text-sm font-normal text-gray-500">
+                {subtitle}
+            </div>
+        </div>
+        <div className="flex flex-row gap-4">
+            {
+                arr.map((e, index) => <SkillCard key={index} iconClass={e.iconClass} icon={e.icon} desc={e.desc} />)
+            }
+        </div>
     </div>
 }

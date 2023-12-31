@@ -5,7 +5,7 @@ import { DownloadSVG, MenuSVG } from "../constants/constants";
 export default function Navbar() {
     return <>
 
-        <div className="w-full h-24 p-4">
+        <div className="w-full h-full p-4">
             <div className="bg-black backdrop-blur-sm bg-opacity-20 rounded-lg w-full h-full flex flex-row justify-between items-center px-8 fill-gray-300 ">
                 <div>
                     <NavbarMenuButton />
