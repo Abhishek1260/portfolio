@@ -20,6 +20,9 @@ export default function Terrain({ instance }: { instance: any }) {
             side={DoubleSide}
             ref={refer}
             uniforms={{
+                random: {
+                    value: Math.random() * 10,
+                },
                 uElevation: {
                     value: 0,
                 },
@@ -110,6 +113,7 @@ export default function Terrain({ instance }: { instance: any }) {
             varying float vElevation;
             uniform float uElevation;
             uniform float uTime;
+            uniform float random;
             
             float getElevation(vec2 _position) {
             
@@ -123,14 +127,14 @@ export default function Terrain({ instance }: { instance: any }) {
                 elevation += cnoise(
                     vec3(
                     position * 0.3, 
-                    0.0
+                    random
                     )
                 ) * 0.5;
             
                 elevation += cnoise(
                     vec3(
                         (position + 123.0) * 1.0, 
-                        0.0
+                        random
                     )
                 ) * 0.2;
             

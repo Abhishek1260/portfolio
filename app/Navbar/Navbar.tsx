@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { NavbarMenuButton } from "../components/client";
 import { DownloadSVG, MenuSVG } from "../constants/constants";
 
@@ -10,7 +11,9 @@ export default function Navbar() {
                     <NavbarMenuButton />
                 </div>
                 <div className=" text-gray-300 text-xl font-semibold uppercase ">
-                    portfolio
+                    <Link href="/">
+                        portfolio
+                    </Link>
                 </div>
                 <div><a href="/Resume.pdf" target="_blank">{DownloadSVG}</a></div>
             </div>
