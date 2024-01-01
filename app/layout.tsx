@@ -20,7 +20,7 @@ export default function RootLayout({
         <div className='-z-10 w-screen h-screen top-0 left-0 fixed blur-sm'>
           <Experience />
         </div>
-        <div className=' z-50 w-screen h-screen flex flex-col overflow-y-hidden'>
+        {/* <div className=' z-50 w-screen h-screen flex flex-col overflow-y-hidden'>
           <div className='w-full h-24'>
             <Navbar />
           </div>
@@ -30,7 +30,7 @@ export default function RootLayout({
               {children}
             </div>
           </div>
-        </div>
+        </div> */}
       </body>
     </html >
   )

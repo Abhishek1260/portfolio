@@ -5,6 +5,7 @@ import * as THREE from 'three'
 import { useEffect, useRef, useState } from "react";
 import Terrain from "./Terrain";
 import Effect from "./Effect";
+import { OrbitControls } from "@react-three/drei";
 
 
 export default function Experience() {
@@ -70,6 +71,8 @@ export default function Experience() {
                 : <></>}
 
             <Effect />
+
+            <OrbitControls />
 
         </Canvas>
 

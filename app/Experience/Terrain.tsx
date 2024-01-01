@@ -32,7 +32,7 @@ export default function Terrain({ instance }: { instance: any }) {
 
     return <mesh scale={[10, 10, 10]} rotation={[-Math.PI * 0.5, 0, 0]}>
         <planeGeometry
-            args={[1, 1, 1000, 1000]}
+            args={[1, 1, 500, 500]}
         />
         <shaderMaterial
             side={DoubleSide}
