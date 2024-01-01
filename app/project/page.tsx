@@ -12,7 +12,7 @@ export default function Page() {
                     Some of my fully functional projects
                 </div>
             </div>
-            {projects.map((e) => <ProjectCard icons={e.icons} title={e.title} desc={e.desc} />)}
+            {projects.map((e) => <ProjectCard key={e.title} icons={e.icons} title={e.title} desc={e.desc} />)}
         </div>
 
     </>
@@ -114,11 +114,11 @@ const ProjectCard = ({ icons, title, desc }: { icons: any, title: string, desc: 
             <div className="h-full aspect-square bg-black bg-opacity-45 backdrop-blur-lg rounded flex flex-col">
                 {icons}
             </div>
-            <div className="flex flex-col gap-4 text-justify">
+            <div className="flex flex-col w-full h-full gap-4 text-justify">
                 <div className="text-2xl font-medium text-gray-300 line-clamp-1 text-ellipsis">
                     {title}
                 </div>
-                <div className="text-md font-normal text-gray-500">
+                <div className="flex-1 w-full h-full overflow-y-scroll text-md font-normal text-gray-500">
                     {desc}
                 </div>
             </div>
