@@ -38,7 +38,6 @@ export default function Terrain({ instance }: { instance: any }) {
             side={DoubleSide}
             ref={refer}
             uniforms={uniforms}
-            wireframe={true}
             vertexShader={
                 `
             vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
