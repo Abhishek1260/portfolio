@@ -1,10 +1,13 @@
-"use client"
-
 import Experience from './Experience/Experience'
 import './globals.css'
 import Navbar from './Navbar/Navbar'
 import { SideBar } from './components/client'
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description: "My Portfolio created using NextJS14"
+}
 
 export default function RootLayout({
   children,

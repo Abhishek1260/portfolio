@@ -1,4 +1,10 @@
+import { Metadata } from "next"
 import { AngularSVG, FlutterSVG, KotlinSVG, NextSVG, NodeJSSVG, PytorchSVG, ReactSVG, SpringBootSVG, SwiftSVG, TensorflowSVG, ThreeSVG } from "../constants/constants"
+
+export const metadata: Metadata = {
+    title: "Skills",
+    description: "My Skills"
+}
 
 export default function Page() {
     return <>

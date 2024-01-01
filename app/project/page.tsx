@@ -1,5 +1,11 @@
+import { Metadata } from "next"
 import { ProjectCard } from "../components/client"
 import { FlutterSVG, NextSVG, NodeJSSVG, PytorchSVG, ReactSVG, TensorflowSVG, ThreeSVG } from "../constants/constants"
+
+export const metadata: Metadata = {
+    title: "Projects",
+    description: "My projects"
+}
 
 export default function Page() {
     return <>
