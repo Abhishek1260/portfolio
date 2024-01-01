@@ -121,25 +121,25 @@ export default function Terrain({ instance }: { instance: any }) {
             float getElevation(vec2 _position) {
             
                 float elevation = 0.0;
-                // float iterations = 5.0;
+                float iterations = 5.0;
             
                 vec2 position = _position;
                 position.x += uTime * 0.1;
                 position.y += uTime * 0.03;
             
-                elevation += cnoise(
-                    vec3(
-                    position * 0.3, 
-                    random
-                    )
-                ) * 0.5;
+                // elevation += cnoise(
+                //     vec3(
+                //     position * 0.3, 
+                //     random
+                //     )
+                // ) * 0.5;
             
-                elevation += cnoise(
-                    vec3(
-                        (position + 123.0) * 1.0, 
-                        random
-                    )
-                ) * 0.2;
+                // elevation += cnoise(
+                //     vec3(
+                //         (position + 123.0) * 1.0, 
+                //         random
+                //     )
+                // ) * 0.2;
             
                 elevation += uElevation;
             
@@ -150,18 +150,18 @@ export default function Terrain({ instance }: { instance: any }) {
                 //     )
                 // ) * 0.5);
             
-                // for (float i = 0.0 ; i < iterations ; i++ ) {
-                //     float freq = i;
-                //     float amplitude = (iterations - i) / iterations;
-                //     float iterationElevation = cnoise(
-                //         vec3(
-                //             position.x * freq , 
-                //             position.y * freq , 
-                //             random
-                //         )
-                //     );
-                //     elevation += iterationElevation * amplitude;
-                // }
+                for (float i = 0.0 ; i < iterations ; i++ ) {
+                    float freq = i;
+                    float amplitude = (iterations - i) / iterations;
+                    float iterationElevation = cnoise(
+                        vec3(
+                            position.x * freq , 
+                            position.y * freq , 
+                            random
+                        )
+                    );
+                    elevation += iterationElevation * amplitude;
+                }
             
                 return elevation;
             
