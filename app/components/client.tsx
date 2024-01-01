@@ -77,7 +77,7 @@ export const ProjectCard = ({ icons, title, desc }: { icons: any, title: string,
 
     useEffect(() => {
 
-        const listener = window.addEventListener("resize", () => {
+        window.addEventListener("resize", () => {
 
             if (window.innerWidth < 740) {
                 setMobile(true)
