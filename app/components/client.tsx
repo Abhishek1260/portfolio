@@ -31,7 +31,9 @@ export const SideBar = () => {
                         <Link href="/skills">
                             <LabelStyle toggleMenu={() => { toggleMenu() }} icon={SkillsSVG} text="Skills" />
                         </Link>
-                        <LabelStyle toggleMenu={() => { toggleMenu() }} icon={ProjectsSVG} text="My Projects" />
+                        <Link href="/project">
+                            <LabelStyle toggleMenu={() => { toggleMenu() }} icon={ProjectsSVG} text="My Projects" />
+                        </Link>
                         <Link href="/contact">
                             <LabelStyle toggleMenu={() => { toggleMenu() }} icon={ContactSVG} text="Contact Me" />
                         </Link>
