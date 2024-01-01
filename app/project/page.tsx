@@ -1,3 +1,4 @@
+import { ProjectCard } from "../components/client"
 import { FlutterSVG, NextSVG, NodeJSSVG, PytorchSVG, ReactSVG, TensorflowSVG, ThreeSVG } from "../constants/constants"
 
 export default function Page() {
@@ -106,24 +107,3 @@ My goal is to provide a valuable tool for partially blind individuals, empowerin
     },
 ]
 
-const ProjectCard = ({ icons, title, desc }: { icons: any, title: string, desc: string }) => {
-
-    return <>
-
-        <div className="w-full h-80 bg-black rounded bg-opacity-40 backdrop-blur-md p-4 flex flex-row gap-4">
-            <div className="h-full aspect-square bg-black bg-opacity-45 backdrop-blur-lg rounded flex flex-col">
-                {icons}
-            </div>
-            <div className="flex flex-col w-full h-full gap-4 text-justify">
-                <div className="text-2xl font-medium text-gray-300 line-clamp-1 text-ellipsis">
-                    {title}
-                </div>
-                <div className="flex-1 w-full h-full overflow-y-scroll text-md font-normal text-gray-500">
-                    {desc}
-                </div>
-            </div>
-        </div>
-
-    </>
-
-}
