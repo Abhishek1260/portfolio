@@ -106,7 +106,7 @@ export const ProjectCard = ({ icons, title, desc }: { icons: any, title: string,
                 </div>
                 <div className="flex flex-col w-full h-full gap-4 text-justify">
                     <div className="text-2xl font-medium text-gray-300 line-clamp-1 text-ellipsis">
-
+                        {title}
                     </div>
                     <div className="flex-1 w-full h-full overflow-y-scroll text-justify text-md font-normal text-gray-500">
                         {desc}
