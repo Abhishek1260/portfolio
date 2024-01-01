@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className='w-screen h-screen'>
         {/* <div className='-z-10 w-screen h-screen top-0 left-0 fixed blur-sm'> */}
         <Experience />
         {/* </div> */}
